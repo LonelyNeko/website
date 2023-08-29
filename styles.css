@@ -1,0 +1,74 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Urbanist', sans-serif;
+    color: #ffffff;
+    background: linear-gradient(to bottom right, #0a0a0a, #121212);
+    overflow-x: hidden;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    backdrop-filter: blur(5px);
+    z-index: 1;
+}
+
+.navbar h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    margin-left: 10px;
+}
+
+.navbar li:first-child {
+    margin-left: 0;
+}
+
+.navbar li a {
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 9px;
+    padding: 10px 20px;
+    background-color: #121212;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar li a:hover {
+    box-shadow: 0 0 15px rgba(158, 94, 255, 0.736);
+}
+
+main {
+    padding-top: 100px;
+    text-align: center;
+}
+
+section {
+    padding: 40px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+p {
+    font-size: 18px;
+}
