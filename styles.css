@@ -6,6 +6,7 @@ body, html {
     color: #ffffff;
     background: linear-gradient(to bottom right, #0a0a0a, #121212);
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 .navbar {
@@ -18,7 +19,7 @@ body, html {
     top: 0;
     left: 0;
     right: 0;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
     z-index: 1;
 }
 
@@ -48,27 +49,137 @@ body, html {
     border-radius: 9px;
     padding: 10px 20px;
     background-color: #121212;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.467), 0 0 10px rgba(255, 255, 255, 0.401);
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .navbar li a:hover {
-    box-shadow: 0 0 15px rgba(158, 94, 255, 0.736);
+    box-shadow: 0 0 0 3px rgba(134, 100, 255, 0.59), 0 0 15px rgba(145, 94, 255, 0.634);
 }
 
-main {
-    padding-top: 100px;
+/* Scrollbar styles for WebKit browsers (Chrome, Safari) */
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #1a1a1a;
+}
+
+/* Scrollbar styles for Firefox */
+body {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.2) #1a1a1a;
+}
+
+/* Scrollbar styles for Edge and IE */
+body::-ms-scrollbar {
+    width: 10px;
+}
+
+body::-ms-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+body::-ms-scrollbar-track {
+    background-color: #1a1a1a;
+}
+
+.centered-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    height: calc(100vh - 80px); /* Adjust to accommodate navbar */
 }
 
-section {
-    padding: 40px;
+.profile-picture {
+    margin-right: 20px;
 }
 
-h2 {
-    font-size: 32px;
+.profile-picture img {
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 20px rgba(130, 99, 255, 0.342);
 }
 
-p {
-    font-size: 18px;
+.text-content {
+    max-width: 600px;
+    text-size-adjust: 120%;
+}
+
+section{
+    padding: 40px 0;
+}
+
+#about {
+    padding: 80px 0;
+}
+
+.about-box {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 30px;
+    margin: 0 auto;
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#about h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 25px;
+    text-align: justify;
+}
+
+@media (max-width: 600px) {
+    .navbar li {
+        display: none;
+    }
+
+    /* Centered content adjustments */
+    .centered-content {
+        flex-direction: column;
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    .profile-picture {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .profile-picture img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .text-content {
+        margin-top: 20px;
+    }
+
+    /* Adjustments for other sections */
+    section {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 16px;
+    }
 }
