@@ -4,7 +4,7 @@ body, html {
     height: 100%;
     font-family: 'Urbanist', sans-serif;
     color: #ffffff;
-    background: linear-gradient(to bottom right, #0a0a0a, #121212);
+    background: #121212;
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
@@ -13,7 +13,7 @@ body, html {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.459);
     padding: 20px;
     position: fixed;
     top: 0;
@@ -46,7 +46,7 @@ body, html {
 .navbar li a {
     color: #ffffff;
     text-decoration: none;
-    border-radius: 9px;
+    border-radius: 19px;
     padding: 10px 20px;
     background-color: #121212;
     box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.467), 0 0 10px rgba(255, 255, 255, 0.401);
@@ -54,7 +54,7 @@ body, html {
 }
 
 .navbar li a:hover {
-    box-shadow: 0 0 0 3px rgba(134, 100, 255, 0.59), 0 0 15px rgba(145, 94, 255, 0.634);
+    box-shadow: 0 0 0 3px rgba(134, 100, 255, 0.59), 0 0 20px rgba(145, 94, 255, 0.753);
 }
 
 /* Scrollbar styles for WebKit browsers (Chrome, Safari) */
@@ -108,7 +108,7 @@ body::-ms-scrollbar-track {
     height: 80%;
     border-radius: 50%;
     object-fit: cover;
-    box-shadow: 0 0 20px rgba(130, 99, 255, 0.342);
+    box-shadow: 0 0 40px rgba(96, 57, 255, 0.597);
 }
 
 .text-content {
@@ -124,14 +124,32 @@ section{
     padding: 80px 0;
 }
 
-.about-box {
+.box {
     background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
+    border-radius: 40px;
     padding: 30px;
     margin: 0 auto;
     text-align: center;
     margin-left: 5%;
     margin-right: 5%;
+}
+
+.styled-button {
+    display: block;
+    width: 100%;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 18px;
+    padding: 10px 0; /* Adjust vertical padding if needed */
+    margin-bottom: 10px;
+    background-color: #121212;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.467), 0 0 10px rgba(255, 255, 255, 0.401);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    text-align: center; /* Center the text within the button */
+}
+
+.styled-button:hover {
+    box-shadow: 0 0 0 3px rgba(134, 100, 255, 0.59), 0 0 20px rgba(155, 108, 255, 0.753);
 }
 
 #about h2 {
